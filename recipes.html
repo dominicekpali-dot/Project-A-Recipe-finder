@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Recipes | Healthy Recipe Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Healthy Recipe Finder home"><span class="brand-mark" aria-hidden="true"></span><span>Healthy Recipe Finder</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="recipes.html">Recipes</a></nav>
+    <a class="button header-button" href="#recipe-list">Browse recipes</a>
+  </header>
+  <main class="recipes-page">
+    <section class="recipes-intro"><h1>Explore our simple, healthy recipes</h1><p>Discover eight quick, whole-food dishes that fit real-life schedules and taste<br class="desktop-only"> amazing. Use the search bar to find a recipe by name or ingredient, or simply scroll<br class="desktop-only"> the list and let something delicious catch your eye.</p></section>
+    <section class="recipe-controls" aria-label="Filter recipes">
+      <div class="time-filters">
+        <label class="sr-only" for="prep-filter">Maximum prep time</label><select id="prep-filter"><option value="all">Max Prep Time</option><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="15">15 minutes</option></select>
+        <label class="sr-only" for="cook-filter">Maximum cook time</label><select id="cook-filter"><option value="all">Max Cook Time</option><option value="0">No cooking</option><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20">20 minutes</option></select>
+      </div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Search by recipe name or ingredient</span><input id="recipe-search" type="search" placeholder="Search by name or ingredient..."></label>
+    </section>
+    <section id="recipe-list" class="recipe-grid" aria-live="polite"></section>
+    <p class="no-results" hidden>No recipes match those filters. Try a different search.</p>
+    <dialog class="recipe-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close recipe">×</button><div class="dialog-content"></div></dialog>
+  </main>
+  <footer class="site-footer"><p>Made with ❤️ and 🥑</p><div class="socials" aria-label="Social links"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="Bluesky">🦋</a><a href="#" aria-label="TikTok">♪</a></div></footer>
+  <script src="script.js"></script><script src="recipes.js"></script>
+</body>
+</html>
